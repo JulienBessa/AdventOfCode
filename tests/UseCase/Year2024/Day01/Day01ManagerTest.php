@@ -1,12 +1,32 @@
 <?php
-$input = '3   4
+
+namespace App\Tests\UseCase\Year2024\Day01;
+
+use App\Tests\UseCase\DayManagerTestInterface;
+use App\UseCase\Year2024\Day01\Day01Manager;
+use PHPUnit\Framework\TestCase;
+
+final class Day01ManagerTest extends TestCase implements DayManagerTestInterface
+{
+    public function testProcessPartOne(): void
+    {
+        $day01Manager = new Day01Manager();
+        
+        $input = '3   4
 4   3
 2   5
 1   3
 3   9
 3   3';
 
-$input2 = '17113   23229
+        $this->assertEquals(11, $day01Manager->processPartOne($input));
+    }
+
+    public function testProcessPartTwo(): void
+    {
+        $day01Manager = new Day01Manager();
+        
+        $input = '17113   23229
 55260   78804
 92726   24891
 79691   90526
@@ -1007,63 +1027,7 @@ $input2 = '17113   23229
 45072   50682
 13192   61043';
 
-echo "\nPart One\n\n";
-echo "Input One : ";
-getAnswerPartOne($input);
-echo "Input Two : ";
-getAnswerPartOne($input2);
 
-
-echo "\nPart Two\n\n";
-echo "Input One : ";
-getAnswerPartTwo($input);
-echo "Input Two : ";
-getAnswerPartTwo($input2);
-
-function getAnswerPartOne($input)
-{
-    $arrays = parseInputToArray($input);
-
-    $cpt = 0;
-
-    for ($i=0; $i < count($arrays["firstCol"]); $i++) { 
-        $cpt += (abs($arrays["firstCol"][$i] - $arrays["secondCol"][$i]));
+        $this->assertEquals(23963899, $day01Manager->processPartTwo($input));
     }
-
-    echo $cpt . "\n";
-}
-
-function getAnswerPartTwo($input)
-{
-    $arrays = parseInputToArray($input);
-
-    $cpt = 0;
-
-    for ($i=0; $i < count($arrays["firstCol"]); $i++) { 
-        $cpt += ($arrays["firstCol"][$i] * (in_array($arrays["firstCol"][$i], $arrays["secondCol"]) ? array_count_values($arrays["secondCol"])[$arrays["firstCol"][$i]] : 0));
-    }
-
-    echo $cpt . "\n";
-}
-
-function parseInputToArray($input)
-{
-    $return = [
-        "firstCol" => [],
-        "secondCol" => [],
-    ];
-
-    $rows = explode("\n", $input);
-
-    foreach ($rows as $row) {
-        $explodedRow = explode("   ", $row);
-        
-        $return["firstCol"][] = intval($explodedRow[0]);
-        $return["secondCol"][] = intval($explodedRow[1]);
-    }
-
-    sort($return["firstCol"]);
-    sort($return["secondCol"]);
-
-    return $return;
 }

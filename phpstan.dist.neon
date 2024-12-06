@@ -1,0 +1,11 @@
+parameters:
+    level: max
+    editorUrl: 'vscode://file/%%file%%:%%line%%'
+    editorUrlTitle: '%%relFile%%:%%line%%'
+    phpVersion: 80300 # PHP 8.3
+    paths:
+        # - bin/
+        # - config/
+        # - public/
+        - src/
+        - tests/
