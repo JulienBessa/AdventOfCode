@@ -11,8 +11,8 @@ final class DistanceCalculator
     {
         $cpt = 0;
 
-        for ($i=0; $i < count($input["firstCol"]); $i++) { 
-            $cpt += (abs($input["firstCol"][$i] - $input["secondCol"][$i]));
+        for ($i = 0; $i < count($input['firstCol']); ++$i) {
+            $cpt += abs($input['firstCol'][$i] - $input['secondCol'][$i]);
         }
 
         return $cpt;

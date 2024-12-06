@@ -10,21 +10,21 @@ final class InputExtractor
     public static function parseInputToArray(string $input): array
     {
         $return = [
-            "firstCol" => [],
-            "secondCol" => [],
+            'firstCol' => [],
+            'secondCol' => [],
         ];
 
         $rows = explode("\n", $input);
 
         foreach ($rows as $row) {
-            $explodedRow = explode("   ", $row);
-            
-            $return["firstCol"][] = intval($explodedRow[0]);
-            $return["secondCol"][] = intval($explodedRow[1]);
+            $explodedRow = explode('   ', $row);
+
+            $return['firstCol'][] = intval($explodedRow[0]);
+            $return['secondCol'][] = intval($explodedRow[1]);
         }
 
-        sort($return["firstCol"]);
-        sort($return["secondCol"]);
+        sort($return['firstCol']);
+        sort($return['secondCol']);
 
         return $return;
     }

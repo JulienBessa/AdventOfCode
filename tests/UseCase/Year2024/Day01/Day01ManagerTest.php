@@ -11,7 +11,7 @@ final class Day01ManagerTest extends TestCase implements DayManagerTestInterface
     public function testProcessPartOne(): void
     {
         $day01Manager = new Day01Manager();
-        
+
         $input = '3   4
 4   3
 2   5
@@ -25,7 +25,7 @@ final class Day01ManagerTest extends TestCase implements DayManagerTestInterface
     public function testProcessPartTwo(): void
     {
         $day01Manager = new Day01Manager();
-        
+
         $input = '17113   23229
 55260   78804
 92726   24891
@@ -1026,7 +1026,6 @@ final class Day01ManagerTest extends TestCase implements DayManagerTestInterface
 85075   62377
 45072   50682
 13192   61043';
-
 
         $this->assertEquals(23963899, $day01Manager->processPartTwo($input));
     }
