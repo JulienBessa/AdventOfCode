@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1 style="text-align: center">Advent Of Code</h1>
+    <div class="row">
+        {% for key, item in listAll %}
+            <div class="col-2">
+                <h3>{{ key }}</h3>
+                {% for keyResp, resp in item %}
+                    {{ keyResp }} : {{ resp }}<br />
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

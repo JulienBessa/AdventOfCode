@@ -9,8 +9,6 @@ class InputExtractorTest extends TestCase
 {
     public function testParseInputToArrayTest(): void
     {
-        $inputExtractor = new InputExtractor();
-
         $input = '3   4
 4   3
 2   5
@@ -23,6 +21,6 @@ class InputExtractorTest extends TestCase
             'secondCol' => [3, 3, 3, 4, 5, 9],
         ];
 
-        $this->assertEquals($expected, $inputExtractor->parseInputToArray($input));
+        $this::assertEquals($expected, InputExtractor::parseInputToArray($input));
     }
 }

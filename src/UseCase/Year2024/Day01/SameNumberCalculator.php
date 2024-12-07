@@ -12,7 +12,7 @@ final class SameNumberCalculator
         $cpt = 0;
 
         for ($i = 0; $i < count($input['firstCol']); ++$i) {
-            $cpt += ($input['firstCol'][$i] * (in_array($input['firstCol'][$i], $input['secondCol']) ? array_count_values($input['secondCol'])[$input['firstCol'][$i]] : 0));
+            $cpt += ($input['firstCol'][$i] * (in_array($input['firstCol'][$i], $input['secondCol'], true) ? array_count_values($input['secondCol'])[$input['firstCol'][$i]] : 0));
         }
 
         return $cpt;

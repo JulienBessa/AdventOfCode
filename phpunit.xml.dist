@@ -12,6 +12,11 @@
   </testsuites>
   <php>
     <env name="APP_ENV" value="testing"/>
+
+        <!-- ###+ symfony/framework-bundle ### -->
+        <env name="APP_ENV" value="dev"/>
+        <env name="APP_SECRET" value="7be377e7ecfc521f46bc111febf1d9ce"/>
+        <!-- ###- symfony/framework-bundle ### -->
   </php>
   <source>
     <include>
