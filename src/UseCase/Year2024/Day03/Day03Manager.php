@@ -17,7 +17,7 @@ final class Day03Manager implements DayManagerInterface
 
             $termArray[] = OperationExecutor::multiply($operators);
         }
-        
+
         return OperationExecutor::add($termArray);
     }
 
@@ -34,7 +34,7 @@ final class Day03Manager implements DayManagerInterface
 
             $termArray[] = OperationExecutor::multiply($operators);
         }
-        
+
         return OperationExecutor::add($termArray);
     }
 }

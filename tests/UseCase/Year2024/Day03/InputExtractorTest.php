@@ -71,7 +71,7 @@ final class InputExtractorTest extends TestCase
             "don't()",
             'mul(5,5)',
             'mul(11,8)',
-            "do()",
+            'do()',
             'mul(8,5)',
         ];
 
@@ -85,7 +85,7 @@ final class InputExtractorTest extends TestCase
             "don't()",
             'mul(5,5)',
             'mul(11,8)',
-            "do()",
+            'do()',
             'mul(8,5)',
         ];
 

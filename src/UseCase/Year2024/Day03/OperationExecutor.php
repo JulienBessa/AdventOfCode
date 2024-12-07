@@ -9,7 +9,7 @@ final class OperationExecutor
      */
     public static function multiply(array $input): int
     {
-        return ($input[0] * $input[1]);
+        return $input[0] * $input[1];
     }
 
     /**

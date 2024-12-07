@@ -10,7 +10,7 @@ final class InputExtractor
     public static function pregMatcher(string $pattern, string $input): array
     {
         preg_match_all($pattern, $input, $matches);
-        
+
         return $matches[0];
     }
 
@@ -20,7 +20,7 @@ final class InputExtractor
     public static function parseInputToMultArray(string $input): array
     {
         $pattern = '/mul\(\d+,\d+\)/';
-        
+
         return InputExtractor::pregMatcher($pattern, $input);
     }
 
@@ -30,7 +30,7 @@ final class InputExtractor
     public static function parseInputToOperators(string $input): array
     {
         $pattern = '/\d+/';
-        
+
         return InputExtractor::pregMatcher($pattern, $input);
     }
 
@@ -40,12 +40,13 @@ final class InputExtractor
     public static function parseInputToMultAndDoDontArray(string $input): array
     {
         $pattern = '/(mul\(\d+,\d+\))|(do\(\))|(don\'t\(\))/';
-        
+
         return InputExtractor::pregMatcher($pattern, $input);
     }
 
     /**
      * @param array<int,string> $input
+     *
      * @return array<int,string>
      */
     public static function treatDoAndDont(array $input): array
@@ -57,14 +58,13 @@ final class InputExtractor
         foreach ($input as $item) {
             if ($item === 'do()') {
                 $keep = true;
-            } else if ($item === "don't()") {
+            } elseif ($item === "don't()") {
                 $keep = false;
-            } else if ($keep) {
+            } elseif ($keep) {
                 $response[] = $item;
             }
         }
 
         return $response;
     }
-    
 }
