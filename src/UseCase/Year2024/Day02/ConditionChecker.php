@@ -74,8 +74,7 @@ final class ConditionChecker
         $previousVal = -1;
 
         foreach ($row as $item) {
-            if ($previousVal !== -1)
-            {
+            if ($previousVal !== -1) {
                 $difference = abs($item - $previousVal);
 
                 if ($difference < 1 || $difference > 3) {

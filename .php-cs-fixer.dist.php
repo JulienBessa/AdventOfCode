@@ -8,7 +8,8 @@ $finder = (new PhpCsFixer\Finder())
 return (new PhpCsFixer\Config())
     ->setRules([
         '@Symfony' => true,
-        'yoda_style' => false
+        'yoda_style' => false,
+        'increment_style' => false,
     ])
     ->setFinder($finder)
 ;

@@ -31,7 +31,7 @@ final class SafeCounter
             if (SafeChecker::isSafe($row)) {
                 $nbSafe++;
             } else {
-                for ($i=0; $i < count($row); $i++) { 
+                for ($i = 0; $i < count($row); $i++) {
                     $clonedRow = Duplicator::duplicateArray($row);
                     unset($clonedRow[$i]);
 

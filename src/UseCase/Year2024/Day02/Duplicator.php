@@ -6,6 +6,7 @@ final class Duplicator
 {
     /**
      * @param array<int,int> $input
+     *
      * @return array<int,int> $input
      */
     public static function duplicateArray(array $input): array

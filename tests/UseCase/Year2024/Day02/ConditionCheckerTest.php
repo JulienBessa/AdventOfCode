@@ -11,33 +11,33 @@ final class ConditionCheckerTest extends TestCase
     {
         $rows = [
             [
-                "expected" => false,
-                "data" => [7, 6, 4, 2, 1],
+                'expected' => false,
+                'data' => [7, 6, 4, 2, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 2, 7, 8, 9],
+                'expected' => false,
+                'data' => [1, 2, 7, 8, 9],
             ],
             [
-                "expected" => false,
-                "data" => [9, 7, 6, 2, 1],
+                'expected' => false,
+                'data' => [9, 7, 6, 2, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 3, 2, 4, 5],
+                'expected' => false,
+                'data' => [1, 3, 2, 4, 5],
             ],
             [
-                "expected" => true,
-                "data" => [8, 6, 4, 4, 1],
+                'expected' => true,
+                'data' => [8, 6, 4, 4, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 3, 6, 7, 9],
+                'expected' => false,
+                'data' => [1, 3, 6, 7, 9],
             ],
         ];
 
         foreach ($rows as $row) {
-            $this::assertEquals($row["expected"], ConditionChecker::hasLevelStable($row["data"]));
+            $this::assertEquals($row['expected'], ConditionChecker::hasLevelStable($row['data']));
         }
     }
 
@@ -45,33 +45,33 @@ final class ConditionCheckerTest extends TestCase
     {
         $rows = [
             [
-                "expected" => false,
-                "data" => [7, 6, 4, 2, 1],
+                'expected' => false,
+                'data' => [7, 6, 4, 2, 1],
             ],
             [
-                "expected" => true,
-                "data" => [1, 2, 7, 8, 9],
+                'expected' => true,
+                'data' => [1, 2, 7, 8, 9],
             ],
             [
-                "expected" => false,
-                "data" => [9, 7, 6, 2, 1],
+                'expected' => false,
+                'data' => [9, 7, 6, 2, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 3, 2, 4, 5],
+                'expected' => false,
+                'data' => [1, 3, 2, 4, 5],
             ],
             [
-                "expected" => false,
-                "data" => [8, 6, 4, 4, 1],
+                'expected' => false,
+                'data' => [8, 6, 4, 4, 1],
             ],
             [
-                "expected" => true,
-                "data" => [1, 3, 6, 7, 9],
+                'expected' => true,
+                'data' => [1, 3, 6, 7, 9],
             ],
         ];
 
         foreach ($rows as $row) {
-            $this::assertEquals($row["expected"], ConditionChecker::hasLevelOnlyIncreasing($row["data"]));
+            $this::assertEquals($row['expected'], ConditionChecker::hasLevelOnlyIncreasing($row['data']));
         }
     }
 
@@ -79,33 +79,33 @@ final class ConditionCheckerTest extends TestCase
     {
         $rows = [
             [
-                "expected" => true,
-                "data" => [7, 6, 4, 2, 1],
+                'expected' => true,
+                'data' => [7, 6, 4, 2, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 2, 7, 8, 9],
+                'expected' => false,
+                'data' => [1, 2, 7, 8, 9],
             ],
             [
-                "expected" => true,
-                "data" => [9, 7, 6, 2, 1],
+                'expected' => true,
+                'data' => [9, 7, 6, 2, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 3, 2, 4, 5],
+                'expected' => false,
+                'data' => [1, 3, 2, 4, 5],
             ],
             [
-                "expected" => true,
-                "data" => [8, 6, 4, 4, 1],
+                'expected' => true,
+                'data' => [8, 6, 4, 4, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 3, 6, 7, 9],
+                'expected' => false,
+                'data' => [1, 3, 6, 7, 9],
             ],
         ];
 
         foreach ($rows as $row) {
-            $this::assertEquals($row["expected"], ConditionChecker::hasLevelOnlyDecreasing($row["data"]));
+            $this::assertEquals($row['expected'], ConditionChecker::hasLevelOnlyDecreasing($row['data']));
         }
     }
 
@@ -113,33 +113,33 @@ final class ConditionCheckerTest extends TestCase
     {
         $rows = [
             [
-                "expected" => true,
-                "data" => [7, 6, 4, 2, 1],
+                'expected' => true,
+                'data' => [7, 6, 4, 2, 1],
             ],
             [
-                "expected" => false,
-                "data" => [1, 2, 7, 8, 9],
+                'expected' => false,
+                'data' => [1, 2, 7, 8, 9],
             ],
             [
-                "expected" => false,
-                "data" => [9, 7, 6, 2, 1],
+                'expected' => false,
+                'data' => [9, 7, 6, 2, 1],
             ],
             [
-                "expected" => true,
-                "data" => [1, 3, 2, 4, 5],
+                'expected' => true,
+                'data' => [1, 3, 2, 4, 5],
             ],
             [
-                "expected" => false,
-                "data" => [8, 6, 4, 4, 1],
+                'expected' => false,
+                'data' => [8, 6, 4, 4, 1],
             ],
             [
-                "expected" => true,
-                "data" => [1, 3, 6, 7, 9],
+                'expected' => true,
+                'data' => [1, 3, 6, 7, 9],
             ],
         ];
 
         foreach ($rows as $row) {
-            $this::assertEquals($row["expected"], ConditionChecker::hasDifferenceOnlyBetweenOneAndThree($row["data"]));
+            $this::assertEquals($row['expected'], ConditionChecker::hasDifferenceOnlyBetweenOneAndThree($row['data']));
         }
     }
 }

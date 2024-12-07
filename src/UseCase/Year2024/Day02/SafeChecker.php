@@ -9,6 +9,6 @@ final class SafeChecker
      */
     public static function isSafe(array $row): bool
     {
-        return (!ConditionChecker::hasLevelStable($row) && ConditionChecker::hasDifferenceOnlyBetweenOneAndThree($row) && (ConditionChecker::hasLevelOnlyDecreasing($row) || ConditionChecker::hasLevelOnlyIncreasing($row)));
+        return !ConditionChecker::hasLevelStable($row) && ConditionChecker::hasDifferenceOnlyBetweenOneAndThree($row) && (ConditionChecker::hasLevelOnlyDecreasing($row) || ConditionChecker::hasLevelOnlyIncreasing($row));
     }
 }
