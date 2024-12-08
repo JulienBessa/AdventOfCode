@@ -14,6 +14,7 @@ final class InputExtractor
 
     /**
      * @param array<int,string> $input
+     *
      * @return array<int,string>
      */
     public static function parseVertical(array $input): array
@@ -21,7 +22,7 @@ final class InputExtractor
         $response = [];
 
         foreach ($input as $key => $item) {
-            for ($i=0; $i < strlen($item); $i++) { 
+            for ($i = 0; $i < strlen($item); $i++) {
                 if ($key === 0) {
                     $response[$i] = substr($item, $i, 1);
                 } else {
@@ -35,6 +36,7 @@ final class InputExtractor
 
     /**
      * @param array<int,string> $input
+     *
      * @return array<int,string>
      */
     public static function parseDiagonalFromNorthWestToSouthEast(array $input): array
@@ -43,10 +45,10 @@ final class InputExtractor
 
         $maxLength = count($input);
 
-        for ($row=0; $row < $maxLength; $row++) {
+        for ($row = 0; $row < $maxLength; $row++) {
             $first = '';
             $second = '';
-            for ($col=0; $col < $maxLength; $col++) {
+            for ($col = 0; $col < $maxLength; $col++) {
                 if ($row + $col < $maxLength) {
                     $first .= substr($input[$row + $col], $col, 1);
 
@@ -68,6 +70,7 @@ final class InputExtractor
 
     /**
      * @param array<int,string> $input
+     *
      * @return array<int,string>
      */
     public static function parseDiagonalFromSouthWestToNorthEast(array $input): array

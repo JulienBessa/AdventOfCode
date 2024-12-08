@@ -12,7 +12,6 @@ class Day04ManagerTest extends TestCase implements DayManagerTestInterface
     {
         $day04Manager = new Day04Manager();
 
-        
         $input = 'MMMSXXMASM
 MSAMXMSMSA
 AMXSXMAAMM
@@ -31,7 +30,6 @@ MXMXAXMASX';
     {
         $day04Manager = new Day04Manager();
 
-        
         $input = 'MMMSXXMASM
 MSAMXMSMSA
 AMXSXMAAMM

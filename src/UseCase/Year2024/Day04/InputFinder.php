@@ -6,7 +6,7 @@ final class InputFinder
 {
     public static function isXmasInString(string $input): bool
     {
-        return (strpos($input, 'XMAS') !== false || strpos($input, 'SAMX') !== false);
+        return strpos($input, 'XMAS') !== false || strpos($input, 'SAMX') !== false;
     }
 
     public static function countXmasInString(string $input): int

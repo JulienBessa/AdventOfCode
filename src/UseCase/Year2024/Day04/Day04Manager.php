@@ -13,7 +13,7 @@ final class Day04Manager implements DayManagerInterface
         $diagonalFromNorthWestToSouthEast = InputExtractor::parseDiagonalFromNorthWestToSouthEast($horizontal);
         $diagonalFromSouthWestToNorthEast = InputExtractor::parseDiagonalFromSouthWestToNorthEast($horizontal);
 
-        return (InputFinder::countXmasInArray($horizontal) + InputFinder::countXmasInArray($vertical) + InputFinder::countXmasInArray($diagonalFromNorthWestToSouthEast) + InputFinder::countXmasInArray($diagonalFromSouthWestToNorthEast));
+        return InputFinder::countXmasInArray($horizontal) + InputFinder::countXmasInArray($vertical) + InputFinder::countXmasInArray($diagonalFromNorthWestToSouthEast) + InputFinder::countXmasInArray($diagonalFromSouthWestToNorthEast);
     }
 
     public function processPartTwo(string $input): mixed
@@ -23,6 +23,6 @@ final class Day04Manager implements DayManagerInterface
         $diagonalFromNorthWestToSouthEast = InputExtractor::parseDiagonalFromNorthWestToSouthEast($horizontal);
         $diagonalFromSouthWestToNorthEast = InputExtractor::parseDiagonalFromSouthWestToNorthEast($horizontal);
 
-        return (InputFinder::countXmasInArray($horizontal) + InputFinder::countXmasInArray($vertical) + InputFinder::countXmasInArray($diagonalFromNorthWestToSouthEast) + InputFinder::countXmasInArray($diagonalFromSouthWestToNorthEast));
+        return InputFinder::countXmasInArray($horizontal) + InputFinder::countXmasInArray($vertical) + InputFinder::countXmasInArray($diagonalFromNorthWestToSouthEast) + InputFinder::countXmasInArray($diagonalFromSouthWestToNorthEast);
     }
 }
