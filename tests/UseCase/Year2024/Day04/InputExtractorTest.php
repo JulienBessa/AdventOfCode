@@ -153,7 +153,7 @@ MXMXAXMASX';
         ];
 
         foreach ($rows as $row) {
-            $this::assertEquals($row["expected"], InputExtractor::transformRowIntoArray($row["data"]));
+            $this::assertEquals($row['expected'], InputExtractor::transformRowIntoArray($row['data']));
         }
     }
 }

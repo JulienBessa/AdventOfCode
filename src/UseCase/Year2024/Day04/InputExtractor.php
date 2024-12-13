@@ -112,7 +112,7 @@ final class InputExtractor
     {
         $array = [];
 
-        for ($i=0; $i < strlen($input); $i++) { 
+        for ($i = 0; $i < strlen($input); $i++) {
             $array[] = substr($input, $i, 1);
         }
 
