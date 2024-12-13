@@ -41,7 +41,7 @@ class DefaultController extends AbstractController
             ],
             'Day 04 2024' => [
                 'partOne' => $day04Manager->processPartOne(InputDay04::INPUT),
-                // 'partTwo' => $day04Manager->processPartTwo(InputDay04::INPUT),
+                'partTwo' => $day04Manager->processPartTwo(InputDay04::INPUT),
             ],
         ];
 

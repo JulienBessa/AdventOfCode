@@ -122,4 +122,38 @@ MXMXAXMASX';
 
         $this::assertEquals($expected, InputExtractor::parseDiagonalFromSouthWestToNorthEast($input));
     }
+
+    public function testTransformRowIntoArray(): void
+    {
+        $rows = [
+            [
+                'expected' => [
+                    'A',
+                    'Z',
+                    'E',
+                ],
+                'data' => 'AZE',
+            ],
+            [
+                'expected' => [
+                    'Q',
+                    'S',
+                    'D',
+                ],
+                'data' => 'QSD',
+            ],
+            [
+                'expected' => [
+                    'W',
+                    'X',
+                    'C',
+                ],
+                'data' => 'WXC',
+            ],
+        ];
+
+        foreach ($rows as $row) {
+            $this::assertEquals($row["expected"], InputExtractor::transformRowIntoArray($row["data"]));
+        }
+    }
 }

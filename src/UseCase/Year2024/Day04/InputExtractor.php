@@ -104,4 +104,18 @@ final class InputExtractor
 
         return $response;
     }
+
+    /**
+     * @return array<int,string>
+     */
+    public static function transformRowIntoArray(string $input): array
+    {
+        $array = [];
+
+        for ($i=0; $i < strlen($input); $i++) { 
+            $array[] = substr($input, $i, 1);
+        }
+
+        return $array;
+    }
 }

@@ -41,6 +41,6 @@ SAXAMASAAA
 MAMMMXMMMM
 MXMXAXMASX';
 
-        $this::assertEquals(18, $day04Manager->processPartTwo($input));
+        $this::assertEquals(9, $day04Manager->processPartTwo($input));
     }
 }
