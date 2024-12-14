@@ -9,7 +9,7 @@ final class InputExtractor
      */
     public static function parseInputToRows(string $input): array
     {
-        return explode("\n", $input);
+        return explode("\r\n", $input);
     }
 
     /**
