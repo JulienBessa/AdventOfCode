@@ -10,6 +10,8 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
         'yoda_style' => false,
         'increment_style' => false,
+        'phpdoc_align' => ['align' => 'left'],
+        'concat_space' => ['spacing' => 'one'],
     ])
     ->setFinder($finder)
 ;

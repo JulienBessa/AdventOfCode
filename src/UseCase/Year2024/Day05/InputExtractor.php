@@ -14,7 +14,7 @@ final class InputExtractor
 
     /**
      * @param array<int,string> $input
-     * 
+     *
      * @return array<string,array<int,int>>
      */
     public static function getPageOrderingRules(array $input): array
@@ -31,10 +31,10 @@ final class InputExtractor
 
         return $datas;
     }
-    
+
     /**
      * @param array<int,string> $input
-     * 
+     *
      * @return array<int,array<int,int>>
      */
     public static function getPagesToProduce(array $input): array
