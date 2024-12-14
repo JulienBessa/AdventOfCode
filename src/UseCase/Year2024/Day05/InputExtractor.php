@@ -15,7 +15,7 @@ final class InputExtractor
     /**
      * @param array<int,string> $input
      *
-     * @return array<string,array<int,int>>
+     * @return array<int,array<int,int>>
      */
     public static function getPageOrderingRules(array $input): array
     {
@@ -43,7 +43,11 @@ final class InputExtractor
 
         foreach ($input as $row) {
             if (strpos($row, ',') !== false) {
-                $datas[] = explode(',', $row);
+                $data = [];
+                foreach (explode(',', $row) as $value) {
+                    $data[] = intval($value);
+                }
+                $datas[] = $data;
             }
         }
 

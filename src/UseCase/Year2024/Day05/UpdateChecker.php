@@ -23,7 +23,7 @@ class UpdateChecker
         for ($i = 0; $i < count($input) - 1; $i++) {
             $isOK = true;
             for ($j = $i + 1; $j < count($input); $j++) {
-                if (!array_key_exists($input[$i], $pageOrderingRules) || !in_array($input[$j], $pageOrderingRules[$input[$i]])) {
+                if (!array_key_exists($input[$i], $pageOrderingRules) || !in_array($input[$j], $pageOrderingRules[$input[$i]], true)) {
                     $isOK = false;
                 }
             }

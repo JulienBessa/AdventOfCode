@@ -22,7 +22,7 @@ class UpdateReformater
                 if ($j !== $i) {
                     if (!array_key_exists($input[$i], $pageOrderingRules)) {
                         $datasNbAfter[$input[$i]] = 0;
-                    } elseif (in_array($input[$j], $pageOrderingRules[$input[$i]])) {
+                    } elseif (in_array($input[$j], $pageOrderingRules[$input[$i]], true)) {
                         $datasNbAfter[$input[$i]]++;
                     }
                 }
