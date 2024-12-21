@@ -3,11 +3,15 @@
 {% block content %}
     <h1 style="text-align: center">Advent Of Code</h1>
     <div class="row">
-        {% for key, item in listAll %}
-            <div class="col-2">
-                <h3>{{ key }}</h3>
-                {% for keyResp, resp in item %}
-                    {{ keyResp }} : {{ resp }}<br />
+        {% for yearTitle, parts in listAll %}
+            <div class="col-2 mb-3 {{ loop.index0 % 5 == 0 ? 'offset-1' : '' }}">
+                <h3>{{ yearTitle }}</h3>
+                {% for keyPart, part in parts %}
+                    {{ keyPart }} : {{ part }}
+                    {% if yearTitle in thanksReddit|keys and keyPart in thanksReddit[yearTitle]|keys %}
+                        (<a href="{{ path('helper', {'year': thanksReddit[yearTitle][keyPart].year, 'day': thanksReddit[yearTitle][keyPart].day, 'part': thanksReddit[yearTitle][keyPart].part }) }}" target="__blank">Thanks reddit</a>)
+                    {% endif %}
+                    <br />
                 {% endfor %}
             </div>
         {% endfor %}
