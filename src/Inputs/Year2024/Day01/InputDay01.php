@@ -4,7 +4,17 @@ namespace App\Inputs\Year2024\Day01;
 
 final class InputDay01
 {
-    public const INPUT = '17113   23229
+    public const INPUT_TEST = <<<EOL
+3   4
+4   3
+2   5
+1   3
+3   9
+3   3
+EOL;
+
+    public const INPUT = <<<EOL
+17113   23229
 55260   78804
 92726   24891
 79691   90526
@@ -1003,5 +1013,6 @@ final class InputDay01
 52094   71011
 85075   62377
 45072   50682
-13192   61043';
+13192   61043
+EOL;
 }
