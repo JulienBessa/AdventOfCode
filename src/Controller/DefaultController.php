@@ -14,7 +14,7 @@ class DefaultController extends AbstractController
     {
         return $this->render('index.html.twig', [
             'listAll' => $adventOfCodeFormatter->formatAnswers(),
-            'thanksReddit' => $adventOfCodeFormatter->formatHelpers()
+            'thanksReddit' => $adventOfCodeFormatter->formatHelpers(),
         ]);
     }
 

@@ -153,9 +153,9 @@ class AdventOfCodeFormatter
         return [
             'Day 06 2024' => [
                 'partTwo' => [
-                    "year" => 2024,
-                    "day" => 6,
-                    "part" => 2
+                    'year' => 2024,
+                    'day' => 6,
+                    'part' => 2,
                 ],
             ],
         ];

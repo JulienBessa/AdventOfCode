@@ -21,10 +21,10 @@ class Day06Manager implements DayManagerInterface
 
         $patrolPathKeyVal = [];
 
-        $patrolPath[] = "row" . $currentPosition['row'] . 'col' . $currentPosition['col'];
+        $patrolPath[] = 'row' . $currentPosition['row'] . 'col' . $currentPosition['col'];
         $patrolPathKeyVal[] = [
-            "row" => $currentPosition['row'],
-            "col" => $currentPosition['col'],
+            'row' => $currentPosition['row'],
+            'col' => $currentPosition['col'],
         ];
 
         while (!PatrolChecker::isPatrolFinished($fullMap, $currentPosition, $currentDirection)) {
@@ -34,11 +34,11 @@ class Day06Manager implements DayManagerInterface
 
             $currentPosition = PatrolChecker::nextPosition($currentPosition, $currentDirection);
 
-            if (!in_array("row" . $currentPosition['row'] . 'col' . $currentPosition['col'], $patrolPath, true)) {
-                $patrolPath[] = "row" . $currentPosition['row'] . 'col' . $currentPosition['col'];
+            if (!in_array('row' . $currentPosition['row'] . 'col' . $currentPosition['col'], $patrolPath, true)) {
+                $patrolPath[] = 'row' . $currentPosition['row'] . 'col' . $currentPosition['col'];
                 $patrolPathKeyVal[] = [
-                    "row" => $currentPosition['row'],
-                    "col" => $currentPosition['col'],
+                    'row' => $currentPosition['row'],
+                    'col' => $currentPosition['col'],
                 ];
             }
         }
@@ -69,9 +69,9 @@ class Day06Manager implements DayManagerInterface
 
                 $patrolPath = [];
 
-                $patrolPath["row" . $currentPosition['row'] . 'col' . $currentPosition['col']] = 1;
+                $patrolPath['row' . $currentPosition['row'] . 'col' . $currentPosition['col']] = 1;
 
-                while (!PatrolChecker::isPatrolFinished($fullMap, $currentPosition, $currentDirection) && $patrolPath["row" . $currentPosition['row'] . 'col' . $currentPosition['col']] < 5) {
+                while (!PatrolChecker::isPatrolFinished($fullMap, $currentPosition, $currentDirection) && $patrolPath['row' . $currentPosition['row'] . 'col' . $currentPosition['col']] < 5) {
                     $fullMap = PatrolChecker::addObstacleToPosition($fullMap, $path['row'], $path['col']);
 
                     while (PatrolChecker::isFacingObstacle($fullMap, $currentPosition, $currentDirection)) {
@@ -80,19 +80,19 @@ class Day06Manager implements DayManagerInterface
 
                     $currentPosition = PatrolChecker::nextPosition($currentPosition, $currentDirection);
 
-                    if (!array_key_exists("row" . $currentPosition['row'] . 'col' . $currentPosition['col'], $patrolPath)) {
-                        $patrolPath["row" . $currentPosition['row'] . 'col' . $currentPosition['col']] = 0;
+                    if (!array_key_exists('row' . $currentPosition['row'] . 'col' . $currentPosition['col'], $patrolPath)) {
+                        $patrolPath['row' . $currentPosition['row'] . 'col' . $currentPosition['col']] = 0;
                     }
 
-                    $patrolPath["row" . $currentPosition['row'] . 'col' . $currentPosition['col']]++;
+                    $patrolPath['row' . $currentPosition['row'] . 'col' . $currentPosition['col']]++;
                 }
 
-                if ($patrolPath["row" . $currentPosition['row'] . 'col' . $currentPosition['col']] >= 5) {
+                if ($patrolPath['row' . $currentPosition['row'] . 'col' . $currentPosition['col']] >= 5) {
                     $nb++;
-                }                
+                }
             }
         }
-        
+
         return $nb;
     }
 }

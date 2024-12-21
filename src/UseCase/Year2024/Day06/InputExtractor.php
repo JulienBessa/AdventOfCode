@@ -14,7 +14,7 @@ class InputExtractor
 
     /**
      * @param array<int,string> $input
-     * 
+     *
      * @return array<int,array<int,string>>
      */
     public static function transformInputIntoArray(array $input): array

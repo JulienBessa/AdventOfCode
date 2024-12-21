@@ -13,8 +13,8 @@ class PatrolCheckerTest extends TestCase
     public function testFindGuardPosition(): void
     {
         $expected = [
-            "row" => 6,
-            "col" => 4,
+            'row' => 6,
+            'col' => 4,
         ];
 
         $this::assertEquals($expected, PatrolChecker::findGuardPosition(InputExtractor::transformInputIntoArray(InputExtractor::parseInputToRows(InputDay06::INPUT_TEST))));
@@ -25,32 +25,32 @@ class PatrolCheckerTest extends TestCase
         $rows = [
             [
                 'position' => [
-                    "row" => 6,
-                    "col" => 4,
+                    'row' => 6,
+                    'col' => 4,
                 ],
                 'expected' => false,
                 'direction' => Direction::NORTH,
             ],
             [
                 'position' => [
-                    "row" => 4,
-                    "col" => 2,
+                    'row' => 4,
+                    'col' => 2,
                 ],
                 'expected' => true,
                 'direction' => Direction::NORTH,
             ],
             [
                 'position' => [
-                    "row" => 2,
-                    "col" => 2,
+                    'row' => 2,
+                    'col' => 2,
                 ],
                 'expected' => true,
                 'direction' => Direction::SOUTH,
             ],
             [
                 'position' => [
-                    "row" => 2,
-                    "col" => 2,
+                    'row' => 2,
+                    'col' => 2,
                 ],
                 'expected' => false,
                 'direction' => Direction::EAST,
@@ -67,32 +67,32 @@ class PatrolCheckerTest extends TestCase
         $rows = [
             [
                 'position' => [
-                    "row" => 6,
-                    "col" => 4,
+                    'row' => 6,
+                    'col' => 4,
                 ],
                 'expected' => false,
                 'direction' => Direction::NORTH,
             ],
             [
                 'position' => [
-                    "row" => 0,
-                    "col" => 2,
+                    'row' => 0,
+                    'col' => 2,
                 ],
                 'expected' => true,
                 'direction' => Direction::NORTH,
             ],
             [
                 'position' => [
-                    "row" => 9,
-                    "col" => 2,
+                    'row' => 9,
+                    'col' => 2,
                 ],
                 'expected' => true,
                 'direction' => Direction::SOUTH,
             ],
             [
                 'position' => [
-                    "row" => 2,
-                    "col" => 2,
+                    'row' => 2,
+                    'col' => 2,
                 ],
                 'expected' => false,
                 'direction' => Direction::EAST,
@@ -135,45 +135,45 @@ class PatrolCheckerTest extends TestCase
         $rows = [
             [
                 'position' => [
-                    "row" => 6,
-                    "col" => 4,
+                    'row' => 6,
+                    'col' => 4,
                 ],
                 'expected' => [
-                    "row" => 5,
-                    "col" => 4,
+                    'row' => 5,
+                    'col' => 4,
                 ],
                 'direction' => Direction::NORTH,
             ],
             [
                 'position' => [
-                    "row" => 4,
-                    "col" => 2,
+                    'row' => 4,
+                    'col' => 2,
                 ],
                 'expected' => [
-                    "row" => 3,
-                    "col" => 2,
+                    'row' => 3,
+                    'col' => 2,
                 ],
                 'direction' => Direction::NORTH,
             ],
             [
                 'position' => [
-                    "row" => 2,
-                    "col" => 2,
+                    'row' => 2,
+                    'col' => 2,
                 ],
                 'expected' => [
-                    "row" => 3,
-                    "col" => 2,
+                    'row' => 3,
+                    'col' => 2,
                 ],
                 'direction' => Direction::SOUTH,
             ],
             [
                 'position' => [
-                    "row" => 2,
-                    "col" => 2,
+                    'row' => 2,
+                    'col' => 2,
                 ],
                 'expected' => [
-                    "row" => 2,
-                    "col" => 3,
+                    'row' => 2,
+                    'col' => 3,
                 ],
                 'direction' => Direction::EAST,
             ],
@@ -188,7 +188,7 @@ class PatrolCheckerTest extends TestCase
     {
         $rows = [
             [
-                "expected" => [
+                'expected' => [
                     ['#', '.', '.', '.', '#', '.', '.', '.', '.', '.'],
                     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '#'],
                     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
@@ -200,11 +200,11 @@ class PatrolCheckerTest extends TestCase
                     ['#', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
                     ['.', '.', '.', '.', '.', '.', '#', '.', '.', '.'],
                 ],
-                "row" => 0,
-                "col" => 0,
+                'row' => 0,
+                'col' => 0,
             ],
             [
-                "expected" => [
+                'expected' => [
                     ['.', '.', '.', '.', '#', '.', '.', '.', '.', '.'],
                     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '#'],
                     ['.', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
@@ -216,14 +216,13 @@ class PatrolCheckerTest extends TestCase
                     ['#', '.', '.', '.', '.', '.', '.', '.', '.', '.'],
                     ['.', '.', '.', '.', '.', '.', '#', '.', '.', '.'],
                 ],
-                "row" => 3,
-                "col" => 4,
+                'row' => 3,
+                'col' => 4,
             ],
         ];
 
-
         foreach ($rows as $key => $row) {
-            $this::assertEquals($row["expected"], PatrolChecker::addObstacleToPosition(InputExtractor::transformInputIntoArray(InputExtractor::parseInputToRows(InputDay06::INPUT_TEST)), $row["row"], $row["col"]), "Assert " . $key + 1);
+            $this::assertEquals($row['expected'], PatrolChecker::addObstacleToPosition(InputExtractor::transformInputIntoArray(InputExtractor::parseInputToRows(InputDay06::INPUT_TEST)), $row['row'], $row['col']), 'Assert ' . $key + 1);
         }
     }
 }
