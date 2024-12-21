@@ -6,7 +6,7 @@ use App\UseCase\DayManagerInterface;
 
 final class Day03Manager implements DayManagerInterface
 {
-    public function processPartOne(string $input): mixed
+    public function processPartOne(string $input): int
     {
         $multArray = InputExtractor::parseInputToMultArray($input);
 
@@ -21,7 +21,7 @@ final class Day03Manager implements DayManagerInterface
         return OperationExecutor::add($termArray);
     }
 
-    public function processPartTwo(string $input): mixed
+    public function processPartTwo(string $input): int
     {
         $multDoDontArray = InputExtractor::parseInputToMultAndDoDontArray($input);
 

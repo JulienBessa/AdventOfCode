@@ -7,7 +7,10 @@ use App\UseCase\DayManagerInterface;
 
 class Day06Manager implements DayManagerInterface
 {
-    public function processPartOne(string $input, bool $returnArray = false): mixed
+    /**
+     * @return int|array<int,array<string,int>>
+     */
+    public function processPartOne(string $input, bool $returnArray = false): int|array
     {
         $patrolPath = [];
 
@@ -31,7 +34,7 @@ class Day06Manager implements DayManagerInterface
 
             $currentPosition = PatrolChecker::nextPosition($currentPosition, $currentDirection);
 
-            if (!in_array("row" . $currentPosition['row'] . 'col' . $currentPosition['col'], $patrolPath)) {
+            if (!in_array("row" . $currentPosition['row'] . 'col' . $currentPosition['col'], $patrolPath, true)) {
                 $patrolPath[] = "row" . $currentPosition['row'] . 'col' . $currentPosition['col'];
                 $patrolPathKeyVal[] = [
                     "row" => $currentPosition['row'],
@@ -47,11 +50,15 @@ class Day06Manager implements DayManagerInterface
         return count($patrolPath);
     }
 
-    public function processPartTwo(string $input): mixed
+    public function processPartTwo(string $input): int
     {
         $nb = 0;
 
         $patrolPathKeyVal = $this->processPartOne($input, true);
+
+        if (!is_iterable($patrolPathKeyVal)) {
+            return $nb;
+        }
 
         foreach ($patrolPathKeyVal as $key => $path) {
             if ($key !== count($patrolPathKeyVal)) {

@@ -6,7 +6,7 @@ use App\UseCase\DayManagerInterface;
 
 class Day05Manager implements DayManagerInterface
 {
-    public function processPartOne(string $input): mixed
+    public function processPartOne(string $input): int
     {
         $nb = 0;
 
@@ -23,7 +23,7 @@ class Day05Manager implements DayManagerInterface
         return $nb;
     }
 
-    public function processPartTwo(string $input): mixed
+    public function processPartTwo(string $input): int
     {
         $nb = 0;
 

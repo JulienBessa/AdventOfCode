@@ -33,6 +33,9 @@ class AdventOfCodeFormatter
         $this->day06Manager = $day06Manager;
     }
 
+    /**
+     * @return array<string,array<string,int|array<int,array<string,int>>>>
+     */
     public function formatAnswers(): array
     {
         return array_merge(
@@ -45,6 +48,9 @@ class AdventOfCodeFormatter
         );
     }
 
+    /**
+     * @return array<string,array<string,array<string,int>>>
+     */
     public function formatHelpers(): array
     {
         return array_merge(
@@ -52,6 +58,9 @@ class AdventOfCodeFormatter
         );
     }
 
+    /**
+     * @return array<string,array<string,int>>
+     */
     private function formatAnswerDay01(): array
     {
         return [
@@ -60,10 +69,11 @@ class AdventOfCodeFormatter
                 'partTwo' => $this->day01Manager->processPartTwo(InputDay01::INPUT),
             ],
         ];
-
-        return $listAll;
     }
 
+    /**
+     * @return array<string,array<string,int>>
+     */
     private function formatAnswerDay02(): array
     {
         return [
@@ -73,7 +83,10 @@ class AdventOfCodeFormatter
             ],
         ];
     }
-    
+
+    /**
+     * @return array<string,array<string,int>>
+     */
     private function formatAnswerDay03(): array
     {
         $hasFileInputDay03 = file_get_contents('../src/Inputs/Year2024/Day03/inputDay03.txt', true) !== false;
@@ -92,6 +105,9 @@ class AdventOfCodeFormatter
         ];
     }
 
+    /**
+     * @return array<string,array<string,int>>
+     */
     private function formatAnswerDay04(): array
     {
         return [
@@ -102,6 +118,9 @@ class AdventOfCodeFormatter
         ];
     }
 
+    /**
+     * @return array<string,array<string,int>>
+     */
     private function formatAnswerDay05(): array
     {
         return [
@@ -112,17 +131,23 @@ class AdventOfCodeFormatter
         ];
     }
 
+    /**
+     * @return array<string,array<string,int|array<int,array<string,int>>>>
+     */
     private function formatAnswerDay06(): array
     {
         return [
             'Day 06 2024' => [
-                'partOne' => $this->day06Manager->processPartOne(InputDay06::INPUT),
-                'partTwo' => $this->day06Manager->processPartTwo(InputDay06::INPUT), //TOO LONG SO PUT ANSWER HERE
-                // 'partTwo' => 1770,
+                'partOne' => $this->day06Manager->processPartOne(InputDay06::INPUT, false),
+                // 'partTwo' => $this->day06Manager->processPartTwo(InputDay06::INPUT), //TOO LONG SO PUT ANSWER HERE
+                'partTwo' => 1770,
             ],
         ];
     }
 
+    /**
+     * @return array<string,array<string,array<string,int>>>
+     */
     private function formatHelperDay06(): array
     {
         return [

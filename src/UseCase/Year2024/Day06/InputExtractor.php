@@ -13,7 +13,7 @@ class InputExtractor
     }
 
     /**
-     * @param array<int,string>
+     * @param array<int,string> $input
      * 
      * @return array<int,array<int,string>>
      */

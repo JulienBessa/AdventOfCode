@@ -6,7 +6,7 @@ use App\UseCase\DayManagerInterface;
 
 final class Day04Manager implements DayManagerInterface
 {
-    public function processPartOne(string $input): mixed
+    public function processPartOne(string $input): int
     {
         $horizontal = InputExtractor::parseInputToRows($input);
         $vertical = InputExtractor::parseVertical($horizontal);
@@ -16,7 +16,7 @@ final class Day04Manager implements DayManagerInterface
         return InputFinder::countXmasInArray($horizontal) + InputFinder::countXmasInArray($vertical) + InputFinder::countXmasInArray($diagonalFromNorthWestToSouthEast) + InputFinder::countXmasInArray($diagonalFromSouthWestToNorthEast);
     }
 
-    public function processPartTwo(string $input): mixed
+    public function processPartTwo(string $input): int
     {
         $nb = 0;
         $fullArray = [];
