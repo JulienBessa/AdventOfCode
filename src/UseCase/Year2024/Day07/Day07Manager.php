@@ -95,7 +95,10 @@ class Day07Manager implements DayManagerInterface
 
                     $total = $numbers[0];
 
-                    for ($i=1; $i < count($numbers); $i++) { 
+                    for ($i=1; $i < count($numbers); $i++) {
+                        if (!is_array($operator) || !array_key_exists($i - 1, $operator)) {
+                            break;
+                        }
                         if ($operator[$i - 1] === Operator::ASTERISK) {
                             $total = Calculator::multiply($total, $numbers[$i]);
                         } elseif ($operator[$i - 1] === Operator::PLUS) {

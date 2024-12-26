@@ -7,7 +7,7 @@ use App\Enum\Year2024\Day07\Operator;
 class OperatorGenerator
 {
     /**
-     * @return array<int,array<int,array<int,Operator>>>
+     * @return array<int,array<int,array<int,Operator>>>|array<string,array<int,array<int,array<int,Operator>>>>
      */
     public static function generateAllByNb(int $nbOperatorsMax): array
     {

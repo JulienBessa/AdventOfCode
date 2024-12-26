@@ -11,7 +11,7 @@ class OperatorGeneratorTest extends TestCase
     public function testGenerateAll(): void
     {
         for ($nbOperators=1; $nbOperators < 12; $nbOperators++) { 
-            $this->assertEquals(pow(2, $nbOperators), count(OperatorGenerator::generateAll($nbOperators)), 'Nb operator : ' . $nbOperators);
+            $this::assertEquals(pow(2, $nbOperators), count(OperatorGenerator::generateAll($nbOperators)), 'Nb operator : ' . $nbOperators);
         }
     }
 
@@ -31,7 +31,7 @@ class OperatorGeneratorTest extends TestCase
         ];
         
         foreach ($datas as $key => $data) {
-            $this->assertEquals($data['expected'], OperatorGenerator::generateFullSameOperator($data['nbOperators'], $data['operator']), 'Assert : ' . $key);
+            $this::assertEquals($data['expected'], OperatorGenerator::generateFullSameOperator($data['nbOperators'], $data['operator']), 'Assert : ' . $key);
         }
     }
 }

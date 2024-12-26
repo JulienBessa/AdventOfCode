@@ -22,7 +22,7 @@ class ArrayDuplicatorTest extends TestCase
         ];
         
         foreach ($datas as $key => $data) {
-            $this->assertEquals($data['expected'], ArrayDuplicator::duplicateIntOperatorArray($data['data']), 'Assert : ' . $key);
+            $this::assertEquals($data['expected'], ArrayDuplicator::duplicateIntOperatorArray($data['data']), 'Assert : ' . $key);
         }
     }
 }

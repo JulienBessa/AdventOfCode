@@ -2,6 +2,8 @@
 
 namespace App\UseCase\Year2024\Day07;
 
+use App\Enum\Year2024\Day07\Operator;
+
 class ArrayDuplicator
 {
     /**
