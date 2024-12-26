@@ -20,7 +20,7 @@ class ArrayDuplicatorTest extends TestCase
                 'data' => [Operator::PLUS, Operator::PLUS, Operator::PLUS, Operator::PLUS],
             ],
         ];
-        
+
         foreach ($datas as $key => $data) {
             $this::assertEquals($data['expected'], ArrayDuplicator::duplicateIntOperatorArray($data['data']), 'Assert : ' . $key);
         }

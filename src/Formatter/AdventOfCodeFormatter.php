@@ -158,7 +158,7 @@ class AdventOfCodeFormatter
         return [
             'Day 07 2024' => [
                 'partOne' => $this->day07Manager->processPartOne(InputDay07::INPUT),
-                //'partTwo' => $this->day07Manager->processPartTwo(InputDay07::INPUT), //TOO LONG SO PUT ANSWER HERE
+                // 'partTwo' => $this->day07Manager->processPartTwo(InputDay07::INPUT), //TOO LONG SO PUT ANSWER HERE
                 'partTwo' => 140575048428831,
             ],
         ];

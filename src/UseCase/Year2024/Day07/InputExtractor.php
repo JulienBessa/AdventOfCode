@@ -31,7 +31,7 @@ class InputExtractor
         if (strpos($item, ':') === false) {
             return $numbers;
         }
-        
+
         foreach (explode(' ', substr($item, strpos($item, ':') + 2)) as $number) {
             $numbers[] = intval($number);
         }

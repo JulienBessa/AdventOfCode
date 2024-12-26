@@ -3,7 +3,6 @@
 namespace App\UseCase\Year2024\Day07;
 
 use App\Enum\Year2024\Day07\Operator;
-use App\Inputs\Year2024\Day07\InputDay07;
 use App\UseCase\DayManagerInterface;
 
 class Day07Manager implements DayManagerInterface
@@ -27,7 +26,7 @@ class Day07Manager implements DayManagerInterface
                 }
                 $total = $numbers[0];
 
-                for ($i=1; $i < count($numbers); $i++) { 
+                for ($i = 1; $i < count($numbers); $i++) {
                     if ($operator[$i - 1] === Operator::ASTERISK) {
                         $total = Calculator::multiply($total, $numbers[$i]);
                     } else {
@@ -68,7 +67,7 @@ class Day07Manager implements DayManagerInterface
 
                 $total = $numbers[0];
 
-                for ($i=1; $i < count($numbers); $i++) {
+                for ($i = 1; $i < count($numbers); $i++) {
                     if ($operator[$i - 1] === Operator::ASTERISK) {
                         $total = Calculator::multiply($total, $numbers[$i]);
                     } else {
@@ -95,7 +94,7 @@ class Day07Manager implements DayManagerInterface
 
                     $total = $numbers[0];
 
-                    for ($i=1; $i < count($numbers); $i++) {
+                    for ($i = 1; $i < count($numbers); $i++) {
                         if (!is_array($operator) || !array_key_exists($i - 1, $operator)) {
                             break;
                         }

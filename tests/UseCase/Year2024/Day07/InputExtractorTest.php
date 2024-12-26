@@ -33,7 +33,7 @@ final class InputExtractorTest extends TestCase
             $this::assertEquals($expected[$key], InputExtractor::parseResultFromRow($item));
         }
     }
-    
+
     public function testParseNumbersFromRow(): void
     {
         $expected = [

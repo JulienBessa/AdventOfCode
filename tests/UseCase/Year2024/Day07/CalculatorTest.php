@@ -11,14 +11,14 @@ class CalculatorTest extends TestCase
     {
         $datas = [
             [
-                "expected" => 22,
-                "firstNumber" => 17,
-                "secondNumber" => 5,
+                'expected' => 22,
+                'firstNumber' => 17,
+                'secondNumber' => 5,
             ],
             [
-                "expected" => 66,
-                "firstNumber" => 55,
-                "secondNumber" => 11,
+                'expected' => 66,
+                'firstNumber' => 55,
+                'secondNumber' => 11,
             ],
         ];
 
@@ -31,14 +31,14 @@ class CalculatorTest extends TestCase
     {
         $datas = [
             [
-                "expected" => 85,
-                "firstNumber" => 17,
-                "secondNumber" => 5,
+                'expected' => 85,
+                'firstNumber' => 17,
+                'secondNumber' => 5,
             ],
             [
-                "expected" => 605,
-                "firstNumber" => 55,
-                "secondNumber" => 11,
+                'expected' => 605,
+                'firstNumber' => 55,
+                'secondNumber' => 11,
             ],
         ];
 
@@ -51,14 +51,14 @@ class CalculatorTest extends TestCase
     {
         $datas = [
             [
-                "expected" => 175,
-                "firstNumber" => 17,
-                "secondNumber" => 5,
+                'expected' => 175,
+                'firstNumber' => 17,
+                'secondNumber' => 5,
             ],
             [
-                "expected" => 5511,
-                "firstNumber" => 55,
-                "secondNumber" => 11,
+                'expected' => 5511,
+                'firstNumber' => 55,
+                'secondNumber' => 11,
             ],
         ];
 
