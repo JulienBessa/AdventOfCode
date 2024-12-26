@@ -7,12 +7,14 @@ use App\Inputs\Year2024\Day02\InputDay02;
 use App\Inputs\Year2024\Day04\InputDay04;
 use App\Inputs\Year2024\Day05\InputDay05;
 use App\Inputs\Year2024\Day06\InputDay06;
+use App\Inputs\Year2024\Day07\InputDay07;
 use App\UseCase\Year2024\Day01\Day01Manager;
 use App\UseCase\Year2024\Day02\Day02Manager;
 use App\UseCase\Year2024\Day03\Day03Manager;
 use App\UseCase\Year2024\Day04\Day04Manager;
 use App\UseCase\Year2024\Day05\Day05Manager;
 use App\UseCase\Year2024\Day06\Day06Manager;
+use App\UseCase\Year2024\Day07\Day07Manager;
 
 class AdventOfCodeFormatter
 {
@@ -22,8 +24,9 @@ class AdventOfCodeFormatter
     private Day04Manager $day04Manager;
     private Day05Manager $day05Manager;
     private Day06Manager $day06Manager;
+    private Day07Manager $day07Manager;
 
-    public function __construct(Day01Manager $day01Manager, Day02Manager $day02Manager, Day03Manager $day03Manager, Day04Manager $day04Manager, Day05Manager $day05Manager, Day06Manager $day06Manager)
+    public function __construct(Day01Manager $day01Manager, Day02Manager $day02Manager, Day03Manager $day03Manager, Day04Manager $day04Manager, Day05Manager $day05Manager, Day06Manager $day06Manager, Day07Manager $day07Manager)
     {
         $this->day01Manager = $day01Manager;
         $this->day02Manager = $day02Manager;
@@ -31,6 +34,7 @@ class AdventOfCodeFormatter
         $this->day04Manager = $day04Manager;
         $this->day05Manager = $day05Manager;
         $this->day06Manager = $day06Manager;
+        $this->day07Manager = $day07Manager;
     }
 
     /**
@@ -45,6 +49,7 @@ class AdventOfCodeFormatter
             $this->formatAnswerDay04(),
             $this->formatAnswerDay05(),
             $this->formatAnswerDay06(),
+            $this->formatAnswerDay07(),
         );
     }
 
@@ -141,6 +146,20 @@ class AdventOfCodeFormatter
                 'partOne' => $this->day06Manager->processPartOne(InputDay06::INPUT, false),
                 // 'partTwo' => $this->day06Manager->processPartTwo(InputDay06::INPUT), //TOO LONG SO PUT ANSWER HERE
                 'partTwo' => 1770,
+            ],
+        ];
+    }
+
+    /**
+     * @return array<string,array<string,int|array<int,array<string,int>>>>
+     */
+    private function formatAnswerDay07(): array
+    {
+        return [
+            'Day 07 2024' => [
+                'partOne' => $this->day07Manager->processPartOne(InputDay07::INPUT),
+                //'partTwo' => $this->day07Manager->processPartTwo(InputDay07::INPUT), //TOO LONG SO PUT ANSWER HERE
+                'partTwo' => 140575048428831,
             ],
         ];
     }
