@@ -2,7 +2,7 @@
 
 namespace App\Tests\UseCase\Year2024\Day06;
 
-use App\Enum\Day06\Direction;
+use App\Enum\Year2024\Day06\Direction;
 use App\Inputs\Year2024\Day06\InputDay06;
 use App\UseCase\Year2024\Day06\InputExtractor;
 use App\UseCase\Year2024\Day06\PatrolChecker;

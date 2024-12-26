@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enum\Day06;
+namespace App\Enum\Year2024\Day06;
 
 enum Direction
 {

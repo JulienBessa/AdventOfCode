@@ -2,7 +2,7 @@
 
 namespace App\UseCase\Year2024\Day06;
 
-use App\Enum\Day06\Direction;
+use App\Enum\Year2024\Day06\Direction;
 use App\UseCase\DayManagerInterface;
 
 class Day06Manager implements DayManagerInterface
