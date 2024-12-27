@@ -21,7 +21,7 @@ class BoundCheckerTest extends TestCase
                 'expected' => true,
             ],
         ];
-        
+
         foreach ($datas as $key => $data) {
             $this::assertEquals($data['expected'], BoundChecker::isOutOfBound(InputExtractor::transformInputIntoArray(InputExtractor::parseInputToRows(InputDay08::INPUT_TEST)), $data['coordinates']), 'Assert ' . $key + 1);
         }

@@ -20,10 +20,10 @@ class Day08Manager implements DayManagerInterface
                 break;
             }
 
-            for ($first=0; $first < count($coordinates) - 1; $first++) { 
-                for ($second=$first + 1; $second < count($coordinates); $second++) { 
+            for ($first = 0; $first < count($coordinates) - 1; $first++) {
+                for ($second = $first + 1; $second < count($coordinates); $second++) {
                     $distance = DistanceCalculator::calculateDistance($coordinates[$first], $coordinates[$second]);
-                    
+
                     $firstAntinode = DistanceCalculator::calculateAntinode($coordinates[$first], $distance, Operation::REMOVE, ($coordinates[$first]['col'] < $coordinates[$second]['col']) ? Operation::REMOVE : Operation::ADD);
                     $secondAntinode = DistanceCalculator::calculateAntinode($coordinates[$second], $distance, Operation::ADD, ($coordinates[$first]['col'] < $coordinates[$second]['col']) ? Operation::ADD : Operation::REMOVE);
 

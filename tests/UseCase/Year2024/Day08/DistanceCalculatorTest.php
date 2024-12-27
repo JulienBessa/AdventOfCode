@@ -22,7 +22,7 @@ class DistanceCalculatorTest extends TestCase
                 'expected' => ['row' => 0, 'col' => 2],
             ],
         ];
-        
+
         foreach ($datas as $key => $data) {
             $this::assertEquals($data['expected'], DistanceCalculator::calculateDistance($data['firstElem'], $data['secondElem']), 'Assert ' . $key + 1);
         }
@@ -46,7 +46,7 @@ class DistanceCalculatorTest extends TestCase
                 'expected' => ['row' => -2, 'col' => 3],
             ],
         ];
-        
+
         foreach ($datas as $key => $data) {
             $this::assertEquals($data['expected'], DistanceCalculator::calculateAntinode($data['elem'], $data['coordinates'], $data['operationRow'], $data['operationCol']), 'Assert ' . $key + 1);
         }

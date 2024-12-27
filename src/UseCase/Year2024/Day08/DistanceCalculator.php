@@ -9,7 +9,7 @@ class DistanceCalculator
     /**
      * @param array<string,int> $firstElem
      * @param array<string,int> $secondElem
-     * 
+     *
      * @return array<string,int>
      */
     public static function calculateDistance(array $firstElem, array $secondElem): array
@@ -23,7 +23,7 @@ class DistanceCalculator
     /**
      * @param array<string,int> $elem
      * @param array<string,int> $coordinates
-     * 
+     *
      * @return array<string,int>
      */
     public static function calculateAntinode(array $elem, array $coordinates, Operation $operationRow, Operation $operationCol): array
